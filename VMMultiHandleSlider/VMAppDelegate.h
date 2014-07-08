@@ -8,8 +8,10 @@
 
 #import <Cocoa/Cocoa.h>
 
+@class VMMultiHandleSlider;
 @interface VMAppDelegate : NSObject <NSApplicationDelegate>
 
 @property (assign) IBOutlet NSWindow *window;
+@property (weak) IBOutlet VMMultiHandleSlider *multiHandleSlider;
 
 @end

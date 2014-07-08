@@ -18,6 +18,13 @@
 		DFF0A875196BF7AA007C4C97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF0A854196BF7AA007C4C97 /* Cocoa.framework */; };
 		DFF0A87D196BF7AA007C4C97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A87B196BF7AA007C4C97 /* InfoPlist.strings */; };
 		DFF0A87F196BF7AA007C4C97 /* VMMultiHandleSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0A87E196BF7AA007C4C97 /* VMMultiHandleSliderTests.m */; };
+		DFF0A88B196BF7C5007C4C97 /* VMMultiHandleSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0A88A196BF7C5007C4C97 /* VMMultiHandleSlider.m */; };
+		DFF0A89E196C1627007C4C97 /* hud_slider-knobBlack-N.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A898196C1627007C4C97 /* hud_slider-knobBlack-N.tiff */; };
+		DFF0A89F196C1627007C4C97 /* hud_slider-knobBlack-N@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A899196C1627007C4C97 /* hud_slider-knobBlack-N@2x.tiff */; };
+		DFF0A8A0196C1627007C4C97 /* hud_slider-knobGray-N.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A89A196C1627007C4C97 /* hud_slider-knobGray-N.tiff */; };
+		DFF0A8A1196C1627007C4C97 /* hud_slider-knobGray-N@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A89B196C1627007C4C97 /* hud_slider-knobGray-N@2x.tiff */; };
+		DFF0A8A2196C1627007C4C97 /* hud_slider-knobWhite-N.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A89C196C1627007C4C97 /* hud_slider-knobWhite-N.tiff */; };
+		DFF0A8A3196C1627007C4C97 /* hud_slider-knobWhite-N@2x.tiff in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A89D196C1627007C4C97 /* hud_slider-knobWhite-N@2x.tiff */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +57,14 @@
 		DFF0A87A196BF7AA007C4C97 /* VMMultiHandleSliderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMultiHandleSliderTests-Info.plist"; sourceTree = "<group>"; };
 		DFF0A87C196BF7AA007C4C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DFF0A87E196BF7AA007C4C97 /* VMMultiHandleSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMultiHandleSliderTests.m; sourceTree = "<group>"; };
+		DFF0A889196BF7C5007C4C97 /* VMMultiHandleSlider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMMultiHandleSlider.h; sourceTree = "<group>"; };
+		DFF0A88A196BF7C5007C4C97 /* VMMultiHandleSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMMultiHandleSlider.m; sourceTree = "<group>"; };
+		DFF0A898196C1627007C4C97 /* hud_slider-knobBlack-N.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobBlack-N.tiff"; sourceTree = "<group>"; };
+		DFF0A899196C1627007C4C97 /* hud_slider-knobBlack-N@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobBlack-N@2x.tiff"; sourceTree = "<group>"; };
+		DFF0A89A196C1627007C4C97 /* hud_slider-knobGray-N.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobGray-N.tiff"; sourceTree = "<group>"; };
+		DFF0A89B196C1627007C4C97 /* hud_slider-knobGray-N@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobGray-N@2x.tiff"; sourceTree = "<group>"; };
+		DFF0A89C196C1627007C4C97 /* hud_slider-knobWhite-N.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobWhite-N.tiff"; sourceTree = "<group>"; };
+		DFF0A89D196C1627007C4C97 /* hud_slider-knobWhite-N@2x.tiff */ = {isa = PBXFileReference; lastKnownFileType = image.tiff; path = "hud_slider-knobWhite-N@2x.tiff"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +130,17 @@
 		DFF0A85A196BF7AA007C4C97 /* VMMultiHandleSlider */ = {
 			isa = PBXGroup;
 			children = (
+				DFF0A888196BF7AE007C4C97 /* View */,
 				DFF0A866196BF7AA007C4C97 /* VMAppDelegate.h */,
 				DFF0A867196BF7AA007C4C97 /* VMAppDelegate.m */,
 				DFF0A869196BF7AA007C4C97 /* MainMenu.xib */,
 				DFF0A86C196BF7AA007C4C97 /* Images.xcassets */,
+				DFF0A898196C1627007C4C97 /* hud_slider-knobBlack-N.tiff */,
+				DFF0A899196C1627007C4C97 /* hud_slider-knobBlack-N@2x.tiff */,
+				DFF0A89A196C1627007C4C97 /* hud_slider-knobGray-N.tiff */,
+				DFF0A89B196C1627007C4C97 /* hud_slider-knobGray-N@2x.tiff */,
+				DFF0A89C196C1627007C4C97 /* hud_slider-knobWhite-N.tiff */,
+				DFF0A89D196C1627007C4C97 /* hud_slider-knobWhite-N@2x.tiff */,
 				DFF0A85B196BF7AA007C4C97 /* Supporting Files */,
 			);
 			path = VMMultiHandleSlider;
@@ -152,6 +174,15 @@
 				DFF0A87B196BF7AA007C4C97 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF0A888196BF7AE007C4C97 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A889196BF7C5007C4C97 /* VMMultiHandleSlider.h */,
+				DFF0A88A196BF7C5007C4C97 /* VMMultiHandleSlider.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,10 +262,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF0A89E196C1627007C4C97 /* hud_slider-knobBlack-N.tiff in Resources */,
+				DFF0A8A0196C1627007C4C97 /* hud_slider-knobGray-N.tiff in Resources */,
 				DFF0A85F196BF7AA007C4C97 /* InfoPlist.strings in Resources */,
+				DFF0A8A2196C1627007C4C97 /* hud_slider-knobWhite-N.tiff in Resources */,
 				DFF0A86D196BF7AA007C4C97 /* Images.xcassets in Resources */,
 				DFF0A865196BF7AA007C4C97 /* Credits.rtf in Resources */,
 				DFF0A86B196BF7AA007C4C97 /* MainMenu.xib in Resources */,
+				DFF0A8A3196C1627007C4C97 /* hud_slider-knobWhite-N@2x.tiff in Resources */,
+				DFF0A8A1196C1627007C4C97 /* hud_slider-knobGray-N@2x.tiff in Resources */,
+				DFF0A89F196C1627007C4C97 /* hud_slider-knobBlack-N@2x.tiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +292,7 @@
 			files = (
 				DFF0A861196BF7AA007C4C97 /* main.m in Sources */,
 				DFF0A868196BF7AA007C4C97 /* VMAppDelegate.m in Sources */,
+				DFF0A88B196BF7C5007C4C97 /* VMMultiHandleSlider.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
