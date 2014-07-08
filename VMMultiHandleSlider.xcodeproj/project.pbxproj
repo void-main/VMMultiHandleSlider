@@ -1,0 +1,482 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DFF0A855196BF7AA007C4C97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF0A854196BF7AA007C4C97 /* Cocoa.framework */; };
+		DFF0A85F196BF7AA007C4C97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A85D196BF7AA007C4C97 /* InfoPlist.strings */; };
+		DFF0A861196BF7AA007C4C97 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0A860196BF7AA007C4C97 /* main.m */; };
+		DFF0A865196BF7AA007C4C97 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A863196BF7AA007C4C97 /* Credits.rtf */; };
+		DFF0A868196BF7AA007C4C97 /* VMAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0A867196BF7AA007C4C97 /* VMAppDelegate.m */; };
+		DFF0A86B196BF7AA007C4C97 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A869196BF7AA007C4C97 /* MainMenu.xib */; };
+		DFF0A86D196BF7AA007C4C97 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A86C196BF7AA007C4C97 /* Images.xcassets */; };
+		DFF0A874196BF7AA007C4C97 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF0A873196BF7AA007C4C97 /* XCTest.framework */; };
+		DFF0A875196BF7AA007C4C97 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFF0A854196BF7AA007C4C97 /* Cocoa.framework */; };
+		DFF0A87D196BF7AA007C4C97 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DFF0A87B196BF7AA007C4C97 /* InfoPlist.strings */; };
+		DFF0A87F196BF7AA007C4C97 /* VMMultiHandleSliderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DFF0A87E196BF7AA007C4C97 /* VMMultiHandleSliderTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DFF0A876196BF7AA007C4C97 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DFF0A849196BF7AA007C4C97 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DFF0A850196BF7AA007C4C97;
+			remoteInfo = VMMultiHandleSlider;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DFF0A851196BF7AA007C4C97 /* VMMultiHandleSlider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VMMultiHandleSlider.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF0A854196BF7AA007C4C97 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		DFF0A857196BF7AA007C4C97 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		DFF0A858196BF7AA007C4C97 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		DFF0A859196BF7AA007C4C97 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		DFF0A85C196BF7AA007C4C97 /* VMMultiHandleSlider-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMultiHandleSlider-Info.plist"; sourceTree = "<group>"; };
+		DFF0A85E196BF7AA007C4C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFF0A860196BF7AA007C4C97 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DFF0A862196BF7AA007C4C97 /* VMMultiHandleSlider-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "VMMultiHandleSlider-Prefix.pch"; sourceTree = "<group>"; };
+		DFF0A864196BF7AA007C4C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		DFF0A866196BF7AA007C4C97 /* VMAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMAppDelegate.h; sourceTree = "<group>"; };
+		DFF0A867196BF7AA007C4C97 /* VMAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMAppDelegate.m; sourceTree = "<group>"; };
+		DFF0A86A196BF7AA007C4C97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		DFF0A86C196BF7AA007C4C97 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DFF0A872196BF7AA007C4C97 /* VMMultiHandleSliderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VMMultiHandleSliderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFF0A873196BF7AA007C4C97 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		DFF0A87A196BF7AA007C4C97 /* VMMultiHandleSliderTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "VMMultiHandleSliderTests-Info.plist"; sourceTree = "<group>"; };
+		DFF0A87C196BF7AA007C4C97 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DFF0A87E196BF7AA007C4C97 /* VMMultiHandleSliderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMMultiHandleSliderTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DFF0A84E196BF7AA007C4C97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A855196BF7AA007C4C97 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF0A86F196BF7AA007C4C97 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A875196BF7AA007C4C97 /* Cocoa.framework in Frameworks */,
+				DFF0A874196BF7AA007C4C97 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DFF0A848196BF7AA007C4C97 = {
+			isa = PBXGroup;
+			children = (
+				DFF0A85A196BF7AA007C4C97 /* VMMultiHandleSlider */,
+				DFF0A878196BF7AA007C4C97 /* VMMultiHandleSliderTests */,
+				DFF0A853196BF7AA007C4C97 /* Frameworks */,
+				DFF0A852196BF7AA007C4C97 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DFF0A852196BF7AA007C4C97 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A851196BF7AA007C4C97 /* VMMultiHandleSlider.app */,
+				DFF0A872196BF7AA007C4C97 /* VMMultiHandleSliderTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DFF0A853196BF7AA007C4C97 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A854196BF7AA007C4C97 /* Cocoa.framework */,
+				DFF0A873196BF7AA007C4C97 /* XCTest.framework */,
+				DFF0A856196BF7AA007C4C97 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DFF0A856196BF7AA007C4C97 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A857196BF7AA007C4C97 /* AppKit.framework */,
+				DFF0A858196BF7AA007C4C97 /* CoreData.framework */,
+				DFF0A859196BF7AA007C4C97 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		DFF0A85A196BF7AA007C4C97 /* VMMultiHandleSlider */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A866196BF7AA007C4C97 /* VMAppDelegate.h */,
+				DFF0A867196BF7AA007C4C97 /* VMAppDelegate.m */,
+				DFF0A869196BF7AA007C4C97 /* MainMenu.xib */,
+				DFF0A86C196BF7AA007C4C97 /* Images.xcassets */,
+				DFF0A85B196BF7AA007C4C97 /* Supporting Files */,
+			);
+			path = VMMultiHandleSlider;
+			sourceTree = "<group>";
+		};
+		DFF0A85B196BF7AA007C4C97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A85C196BF7AA007C4C97 /* VMMultiHandleSlider-Info.plist */,
+				DFF0A85D196BF7AA007C4C97 /* InfoPlist.strings */,
+				DFF0A860196BF7AA007C4C97 /* main.m */,
+				DFF0A862196BF7AA007C4C97 /* VMMultiHandleSlider-Prefix.pch */,
+				DFF0A863196BF7AA007C4C97 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DFF0A878196BF7AA007C4C97 /* VMMultiHandleSliderTests */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A87E196BF7AA007C4C97 /* VMMultiHandleSliderTests.m */,
+				DFF0A879196BF7AA007C4C97 /* Supporting Files */,
+			);
+			path = VMMultiHandleSliderTests;
+			sourceTree = "<group>";
+		};
+		DFF0A879196BF7AA007C4C97 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DFF0A87A196BF7AA007C4C97 /* VMMultiHandleSliderTests-Info.plist */,
+				DFF0A87B196BF7AA007C4C97 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DFF0A850196BF7AA007C4C97 /* VMMultiHandleSlider */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF0A882196BF7AA007C4C97 /* Build configuration list for PBXNativeTarget "VMMultiHandleSlider" */;
+			buildPhases = (
+				DFF0A84D196BF7AA007C4C97 /* Sources */,
+				DFF0A84E196BF7AA007C4C97 /* Frameworks */,
+				DFF0A84F196BF7AA007C4C97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VMMultiHandleSlider;
+			productName = VMMultiHandleSlider;
+			productReference = DFF0A851196BF7AA007C4C97 /* VMMultiHandleSlider.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DFF0A871196BF7AA007C4C97 /* VMMultiHandleSliderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DFF0A885196BF7AA007C4C97 /* Build configuration list for PBXNativeTarget "VMMultiHandleSliderTests" */;
+			buildPhases = (
+				DFF0A86E196BF7AA007C4C97 /* Sources */,
+				DFF0A86F196BF7AA007C4C97 /* Frameworks */,
+				DFF0A870196BF7AA007C4C97 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DFF0A877196BF7AA007C4C97 /* PBXTargetDependency */,
+			);
+			name = VMMultiHandleSliderTests;
+			productName = VMMultiHandleSliderTests;
+			productReference = DFF0A872196BF7AA007C4C97 /* VMMultiHandleSliderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DFF0A849196BF7AA007C4C97 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = VM;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Void Main";
+				TargetAttributes = {
+					DFF0A871196BF7AA007C4C97 = {
+						TestTargetID = DFF0A850196BF7AA007C4C97;
+					};
+				};
+			};
+			buildConfigurationList = DFF0A84C196BF7AA007C4C97 /* Build configuration list for PBXProject "VMMultiHandleSlider" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DFF0A848196BF7AA007C4C97;
+			productRefGroup = DFF0A852196BF7AA007C4C97 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DFF0A850196BF7AA007C4C97 /* VMMultiHandleSlider */,
+				DFF0A871196BF7AA007C4C97 /* VMMultiHandleSliderTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DFF0A84F196BF7AA007C4C97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A85F196BF7AA007C4C97 /* InfoPlist.strings in Resources */,
+				DFF0A86D196BF7AA007C4C97 /* Images.xcassets in Resources */,
+				DFF0A865196BF7AA007C4C97 /* Credits.rtf in Resources */,
+				DFF0A86B196BF7AA007C4C97 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF0A870196BF7AA007C4C97 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A87D196BF7AA007C4C97 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DFF0A84D196BF7AA007C4C97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A861196BF7AA007C4C97 /* main.m in Sources */,
+				DFF0A868196BF7AA007C4C97 /* VMAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DFF0A86E196BF7AA007C4C97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DFF0A87F196BF7AA007C4C97 /* VMMultiHandleSliderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DFF0A877196BF7AA007C4C97 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DFF0A850196BF7AA007C4C97 /* VMMultiHandleSlider */;
+			targetProxy = DFF0A876196BF7AA007C4C97 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DFF0A85D196BF7AA007C4C97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFF0A85E196BF7AA007C4C97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		DFF0A863196BF7AA007C4C97 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFF0A864196BF7AA007C4C97 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		DFF0A869196BF7AA007C4C97 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFF0A86A196BF7AA007C4C97 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		DFF0A87B196BF7AA007C4C97 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DFF0A87C196BF7AA007C4C97 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DFF0A880196BF7AA007C4C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		DFF0A881196BF7AA007C4C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		DFF0A883196BF7AA007C4C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMultiHandleSlider/VMMultiHandleSlider-Prefix.pch";
+				INFOPLIST_FILE = "VMMultiHandleSlider/VMMultiHandleSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		DFF0A884196BF7AA007C4C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMultiHandleSlider/VMMultiHandleSlider-Prefix.pch";
+				INFOPLIST_FILE = "VMMultiHandleSlider/VMMultiHandleSlider-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		DFF0A886196BF7AA007C4C97 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VMMultiHandleSlider.app/Contents/MacOS/VMMultiHandleSlider";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMultiHandleSlider/VMMultiHandleSlider-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "VMMultiHandleSliderTests/VMMultiHandleSliderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		DFF0A887196BF7AA007C4C97 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/VMMultiHandleSlider.app/Contents/MacOS/VMMultiHandleSlider";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VMMultiHandleSlider/VMMultiHandleSlider-Prefix.pch";
+				INFOPLIST_FILE = "VMMultiHandleSliderTests/VMMultiHandleSliderTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DFF0A84C196BF7AA007C4C97 /* Build configuration list for PBXProject "VMMultiHandleSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF0A880196BF7AA007C4C97 /* Debug */,
+				DFF0A881196BF7AA007C4C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DFF0A882196BF7AA007C4C97 /* Build configuration list for PBXNativeTarget "VMMultiHandleSlider" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF0A883196BF7AA007C4C97 /* Debug */,
+				DFF0A884196BF7AA007C4C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DFF0A885196BF7AA007C4C97 /* Build configuration list for PBXNativeTarget "VMMultiHandleSliderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DFF0A886196BF7AA007C4C97 /* Debug */,
+				DFF0A887196BF7AA007C4C97 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DFF0A849196BF7AA007C4C97 /* Project object */;
+}
