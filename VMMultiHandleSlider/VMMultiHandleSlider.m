@@ -8,8 +8,8 @@
 
 #import "VMMultiHandleSlider.h"
 
-#define kSliderHandlerWidth  13
-#define kSliderHandlerHeight 17
+#define kSliderHandleWidth  13
+#define kSliderHandleHeight 17
 #define kSliderBarHeight     4
 #define kSliderBarColor      [NSColor blackColor]
 
@@ -86,7 +86,7 @@ static void *VMMultiHandleSliderContext = nil;
 
 - (NSImage *)sliderBarImage
 {
-    float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
+    float slidableWidth = self.bounds.size.width - kSliderHandleWidth;
     NSImage *barImage = [[NSImage alloc] initWithSize:NSMakeSize(slidableWidth, kSliderBarHeight)];
     [barImage lockFocus];
     [kSliderBarColor set];
@@ -118,10 +118,10 @@ static void *VMMultiHandleSliderContext = nil;
 
     [self addObserver:self forKeyPath:[NSString stringWithFormat:@"values.%@", name] options:NSKeyValueObservingOptionNew context:&VMMultiHandleSliderContext];
 
-    float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
+    float slidableWidth = self.bounds.size.width - kSliderHandleWidth;
     float midY = NSMidY(self.bounds);
-    NSRect handleRect = NSMakeRect(slidableWidth * handle.curRatio, midY - kSliderHandlerHeight * 0.5, kSliderHandlerWidth, kSliderHandlerHeight);
-    NSImageView *imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, kSliderHandlerWidth, kSliderHandlerHeight)];
+    NSRect handleRect = NSMakeRect(slidableWidth * handle.curRatio, midY - kSliderHandleHeight * 0.5, kSliderHandleWidth, kSliderHandleHeight);
+    NSImageView *imageView = [[NSImageView alloc] initWithFrame:NSMakeRect(0, 0, kSliderHandleWidth, kSliderHandleHeight)];
     imageView.image = handle.handleImage;
     imageView.tag = kDynamicViewTag;
     [self addSubview:imageView];
@@ -172,7 +172,7 @@ static void *VMMultiHandleSliderContext = nil;
     if (newX + halfWidth > right) newX = right - halfWidth;
 
     self.activeHandleView.frame = NSMakeRect(newX - self.activeHandleView.frame.size.width * 0.5, self.activeHandleView.frame.origin.y, self.activeHandleView.frame.size.width, self.activeHandleView.frame.size.height);
-    float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
+    float slidableWidth = self.bounds.size.width - kSliderHandleWidth;
     float ratio = (newX - halfWidth) / slidableWidth;
     self.activeHandle.curRatio = ratio;
 
@@ -247,9 +247,9 @@ static void *VMMultiHandleSliderContext = nil;
 
         float newValue = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];
         float ratio = [handle ratioForValue:newValue];
-        float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
+        float slidableWidth = self.bounds.size.width - kSliderHandleWidth;
         NSArray *boundary = [self boundaryForView:handle.handleView];
-        float halfWidth = kSliderHandlerWidth * 0.5;
+        float halfWidth = kSliderHandleWidth * 0.5;
         float left = [[boundary objectAtIndex:0] floatValue];
         float right = [[boundary objectAtIndex:1] floatValue];
         float minRatio = (left + halfWidth) / slidableWidth;
