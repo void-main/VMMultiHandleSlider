@@ -16,8 +16,11 @@
 #define kStaticViewTag       1001
 #define kDynamicViewTag      1002
 
+static void *VMMultiHandleSliderContext = nil;
+
 @interface VMSliderHandle : NSObject {
     ValueBlock _valueBlock;
+    ValueBlock _invValueBlock;
 }
 
 @property (nonatomic, strong) NSString  *name;
@@ -26,7 +29,9 @@
 @property (nonatomic, weak)   NSView    *handleView;
 
 - (void)setValueBlock:(ValueBlock)valueBlock;
+- (void)setInvValueBlock:(ValueBlock)valueBlock;
 - (float)curValue;
+- (float)ratioForValue:(float)value;
 
 @end
 
@@ -34,6 +39,10 @@
 
 - (void)setValueBlock:(ValueBlock)valueBlock {
     _valueBlock = valueBlock;
+}
+
+- (void)setInvValueBlock:(ValueBlock)valueBlock {
+    _invValueBlock = valueBlock;
 }
 
 - (float)curValue
@@ -44,6 +53,16 @@
     }
 
     return value;
+}
+
+- (float)ratioForValue:(float)value
+{
+    float ratio = value;
+    if (_invValueBlock) {
+        ratio = _invValueBlock(value);
+    }
+
+    return ratio;
 }
 
 @end
@@ -81,10 +100,11 @@
     _valueChangedBlock = valueChangedBlock;
 }
 
-- (void)addHandle:(NSString *)name image:(NSImage *)image initRatio:(float)initRatio valueBlock:(ValueBlock)valueBlock
+- (void)addHandle:(NSString *)name image:(NSImage *)image initRatio:(float)initRatio valueBlock:(ValueBlock)valueBlock invValueBlock:(ValueBlock)invValueBlock
 {
     if (self.handles == nil) {
         self.handles = [[NSMutableDictionary alloc] init];
+        self.values = [[NSMutableDictionary alloc] init];
     }
 
     VMSliderHandle *handle = [[VMSliderHandle alloc] init];
@@ -92,7 +112,11 @@
     handle.handleImage = image;
     handle.curRatio = initRatio;
     [handle setValueBlock:valueBlock];
+    [handle setInvValueBlock:invValueBlock];
     [self.handles setObject:handle forKey:name];
+    [self.values setObject:[NSNumber numberWithFloat:[handle curValue]] forKey:name];
+
+    [self addObserver:self forKeyPath:[NSString stringWithFormat:@"values.%@", name] options:NSKeyValueObservingOptionNew context:&VMMultiHandleSliderContext];
 
     float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
     float midY = NSMidY(self.bounds);
@@ -156,12 +180,16 @@
     if (changeDiff > FLT_EPSILON && _valueChangedBlock) {
         self.lastValue = self.activeHandle.curRatio;
 
-        NSMutableDictionary *values = [[NSMutableDictionary alloc] init];
         for (NSString *key in self.handles) {
             VMSliderHandle *handle = [self.handles objectForKey:key];
-            [values setObject:[NSNumber numberWithFloat:[handle curValue]] forKey:key];
+            float oldValue = [[self.values objectForKey:key] floatValue];
+            float curValue = [handle curValue];
+
+            if (ABS(curValue - oldValue) > FLT_EPSILON) {
+                [self.values setObject:[NSNumber numberWithFloat:[handle curValue]] forKey:key];
+            }
         }
-        _valueChangedBlock([values copy]);
+        _valueChangedBlock([self.values copy]);
     }
 }
 
@@ -185,11 +213,11 @@
         if (subview != view && subview.tag == kDynamicViewTag) {
             float leftBoundary = subview.frame.origin.x;
             float rightBoundary = subview.frame.origin.x + subview.frame.size.width;
-            if (rightBoundary < viewLeftBounday && rightBoundary > min) {
+            if (rightBoundary <= viewLeftBounday && rightBoundary > min) {
                 min = rightBoundary;
             }
 
-            if (leftBoundary > viewRightBounday && leftBoundary < max) {
+            if (leftBoundary >= viewRightBounday && leftBoundary < max) {
                 max = leftBoundary;
             }
         }
@@ -200,5 +228,50 @@
     return [boundary copy];
 }
 
+#pragma mark -
+#pragma mark KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if (context != &VMMultiHandleSliderContext) {
+        return [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
+    }
+
+    if ([keyPath hasPrefix:@"values."]) {
+        NSString *key = [[keyPath componentsSeparatedByString:@"."] objectAtIndex:1];
+        VMSliderHandle *handle = [self.handles objectForKey:key];
+        id obj = [change objectForKey:NSKeyValueChangeNewKey];
+
+        if ([obj class] == [NSNull class]) {
+            return;
+        }
+
+        float newValue = [[change objectForKey:NSKeyValueChangeNewKey] floatValue];
+        float ratio = [handle ratioForValue:newValue];
+        float slidableWidth = self.bounds.size.width - kSliderHandlerWidth;
+        NSArray *boundary = [self boundaryForView:handle.handleView];
+        float halfWidth = kSliderHandlerWidth * 0.5;
+        float left = [[boundary objectAtIndex:0] floatValue];
+        float right = [[boundary objectAtIndex:1] floatValue];
+        float minRatio = (left + halfWidth) / slidableWidth;
+        float maxRatio = (right - halfWidth) / slidableWidth;
+
+        ratio = MAX(ratio, minRatio);
+        ratio = MIN(ratio, maxRatio);
+
+        if (ABS(ratio - handle.curRatio) > FLT_EPSILON) {
+            handle.curRatio = ratio;
+            float newX = slidableWidth * ratio;
+            handle.handleView.frame = NSMakeRect(newX - handle.handleView.frame.size.width * 0.5, handle.handleView.frame.origin.y, handle.handleView.frame.size.width, handle.handleView.frame.size.height);
+
+            [self willChangeValueForKey:keyPath];
+            [self.values setObject:[NSNumber numberWithFloat:[handle curValue]] forKey:key];
+            [self didChangeValueForKey:keyPath];
+
+            if (_valueChangedBlock) {
+                _valueChangedBlock([self.values copy]);
+            }
+        }
+    }
+}
 
 @end

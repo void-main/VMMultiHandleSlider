@@ -20,10 +20,11 @@ typedef void(^ValueChangedBlock)(NSDictionary *handles);
 @property (nonatomic, weak)   NSView              *activeHandleView;
 @property (nonatomic)         NSArray             *activeBoundary;
 @property (nonatomic, retain) NSMutableDictionary *handles;
+@property (nonatomic, strong) NSMutableDictionary *values;
 @property (nonatomic)         float                lastValue;
 
 - (void)setValueChangedBlock:(ValueChangedBlock)valueChangedBlock;
 
-- (void)addHandle:(NSString *)name image:(NSImage *)image initRatio:(float)initRatio valueBlock:(ValueBlock)valueBlock;
+- (void)addHandle:(NSString *)name image:(NSImage *)image initRatio:(float)initRatio valueBlock:(ValueBlock)valueBlock invValueBlock:(ValueBlock)invValueBlock;
 
 @end

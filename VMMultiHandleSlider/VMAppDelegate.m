@@ -19,6 +19,9 @@
                            valueBlock:^float(float inVal) {
                                return inVal;
                            }
+                        invValueBlock:^float(float inVal) {
+                            return inVal;
+                        }
      ];
 
     [self.multiHandleSlider addHandle:@"Low"
@@ -27,6 +30,9 @@
                            valueBlock:^float(float inVal) {
                                return inVal;
                            }
+                        invValueBlock:^float(float inVal) {
+                            return inVal;
+                        }
      ];
 
     [self.multiHandleSlider addHandle:@"Gamma"
@@ -35,6 +41,9 @@
                            valueBlock:^float(float inVal) {
                                return inVal * 2;
                             }
+                        invValueBlock:^float(float inVal) {
+                            return inVal / 2;
+                        }
      ];
 
     [self.multiHandleSlider setValueChangedBlock:^(NSDictionary *handles) {
